@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+        url('fonts/Poppins-Regular.woff') format('woff'),
+        url('fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+      font-family: Poppins, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* DEFAULT H1-H6 AND P SIZE*/
+h1 { font-size: 80px; }
+
+h2 { font-size: 70px; }
+
+h3 { font-size: 50px; }
+
+h4 { font-size: 30px; }
+
+h5 { font-size: 20px; }
+
+h6 {  font-size: 15px; }
+
+p {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVIGATION FOR HOME -------------------------------------------  */
+
+nav {
+    background-color: rgb(158, 0, 0);
+    width: 100%;
+    padding: 1%;
+}
+
+/* Container that limits width */
+.nav-container {
+    max-width: 1200px;       /* your desired width */
+    margin: 0 auto;          /* center horizontally */
+    display: flex;           /* flex to split left + right */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    padding: 1% 0 0 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 0%;
+    padding: 4%;
+}
+
+.nav-links a {
+    font-family: Poppins, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    font-weight: 800;
+    white-space: nowrap;   /* ✅ keeps "Track Status" in one line */
+}
+
+
+.nav-links a:hover {
+    background-color: #ffffff;
+    color: rgb(158, 0, 0);
+    transform: scale(1);
+    box-shadow: 2px 2px 10px #00000063;
+}
+
+/* Login button */
+.nav-login .login-btn {
+    font-family: Poppins, sans-serif;
+    background-color: #ffffff;
+    color: rgb(158, 0, 0);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-login .login-btn:hover {
+    background-color: rgb(255, 133, 133);
+    color: #ffffff;
+    box-shadow: 2px 2px 10px #00000063;
+}
+
+section#home-1{
+    height: 100%;
+    background-image: url('images/blue-bg.jpg');
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.home-1-container{
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5%;
+}
+
+.home-intro{
+     display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
+    margin-bottom: 0%;
+    width: 60%;
+}
+
+.welcometocertigo{
+        margin-bottom: 0;
+        color: rgb(0, 136, 255);
+        font-weight: 800;
+        font-size: 60px;
+}
+
+.welcometocertigo-desc{
+    margin-top: 1%;
+}
