@@ -14,7 +14,11 @@ html {
     padding: 0;
     scroll-behavior: smooth;
       font-family: Poppins, sans-serif;
+       width: 100%;
+  max-width: 100%;   /* ✅ prevents overflow */
+  overflow-x: hidden;
 }
+
 
 html,
 body {
@@ -123,31 +127,282 @@ section#home-1{
     padding: 0;
 }
 
-.home-1-container{
+
+.home-1-container {
     width: 100%;
     max-width: 1200px;
-    display: block;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     padding: 5%;
+    flex-wrap: wrap; /* allows wrapping when needed */
 }
 
-.home-intro{
-     display: flex;
-    justify-content: left;
-    flex-flow: row wrap;
-    margin-bottom: 0%;
-    width: 60%;
+.home-intro {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.home-intro:first-child {
+    flex: 2; /* text section wider */
+}
+
+.home-intro:last-child {
+    flex: 1; /* image section smaller */
+    display: flex;
+    justify-content: center;
+}
+
+.home-intro img {
+    max-width: 100%;
+    height: auto;
 }
 
 .welcometocertigo{
+    margin-top: 0%;
         margin-bottom: 0;
         color: rgb(0, 136, 255);
-        font-weight: 800;
-        font-size: 60px;
+        font-weight: 1000;
+        font-size: 70px;
 }
 
 .welcometocertigo-desc{
     margin-top: 1%;
+}
+
+
+/* WHAT U CAN DO HERE  PART */
+
+.home-2-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0% 0% 5% 0%;
+    flex-flow: column wrap; /* allows wrapping when needed */
+}
+
+.home2-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-bottom: 3.5%;
+}
+
+
+.whatucandohere{
+    margin-top: 0%;
+        margin-bottom: 1%;
+        color: rgb(0, 136, 255);
+        font-weight: 1000;
+        font-size: 70px;
+}
+
+.home2-intro p{
+    margin-top: 0%;
+}
+
+.card-req-track-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 80px;  /* use px instead of % */
+}
+
+
+.card-request {
+    background: white;
+    width: 200px;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card-request:hover {
+    transform: translateY(-5px);
+}
+
+.card-request .material-symbols-outlined {
+    font-size: 80px;
+    color: #007bff;
+    /* Blue */
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card-request p {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+    margin: 0;
+}
+
+section#home-2{
+    height: 100%;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 2% 5% 5% 5%;
+  background: #fff ;
+}
+
+.about-image img {
+  width: 450px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 70px;
+  font-weight: bold;
+  color: #008cff;
+  margin-bottom: 0px;
+}
+
+.about-subtitle {
+  font-size: 35px;
+  font-weight: bold;
+  color: #008cff;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.about-desc {
+    margin-top: 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000;
+}
+
+section#home-3{
+    height: 100%;
+    background-image: url('images/blue-bg-reversed.jpg');
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.howdoesitwork-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 5%;
+}
+
+.steps-card-cont{
+      display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Makes it responsive */
+  margin-top: 2%;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  background: #007bff;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.step-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+/* FOOTER -------------------- */
+.footer {
+  background: #a50000; /* deep red */
+  color: #fff;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* makes it responsive */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  text-align: right;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.footer strong {
+  font-size: 15px;
+  color: #fff;
+}
+
+.footer .credits {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+    margin-top: 20px;
+  }
 }
